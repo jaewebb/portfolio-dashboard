@@ -1,6 +1,6 @@
 <template>
   <div>
-    <canvas id="barChart" class="w-full h-full"></canvas>
+    <canvas id="barChart" class="md:w-full h-full"></canvas>
   </div>
 </template>
 

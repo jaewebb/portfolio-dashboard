@@ -3,17 +3,17 @@
     <main >
       <h1 class="pt-1">{{ greeting }}, Jae!</h1>
       <span class="disclaimer">Last Updated: {{ lastUpdated }}</span>
-      <div class="mt-3 grid grid-cols-5 gap-3">
-        <DashboardCard class="col-span-3">
+      <div class="mt-3 grid md:grid-cols-5 xs:grid-cols-1 gap-3">
+        <DashboardCard class="md:col-span-3">
           <BarChart />
         </DashboardCard>
-        <div class="flex flex-col justify-between col-span-2">
-          <DashboardCard>
+        <div class="flex md:flex-col md:justify-between md:col-span-2">
+          <DashboardCard class="md:mr-0 mr-2">
             <h2 class="h4">Interest Earned this Month</h2>
             <h3 class="text-lime-600">$321.98</h3>
             <span class="disclaimer">$11.12 earned in the past week</span>
           </DashboardCard>
-          <DashboardCard>
+          <DashboardCard class="md:ml-0 ml-2">
             <h2 class="h4">Rate of Return this Month</h2>
             <h3 class="text-lime-600">2.11%</h3>
             <span class="disclaimer">You have gained $2510.36</span>
