@@ -2,7 +2,7 @@
   <div class="flex flex-col justify-between text-white bg-slate-900 pt-16 p-10">
     <div>
       <div class="flex flex-col justify-center items-center">
-        <div>
+        <div class="logo">
           <i class="fa-solid fa-money-bill-trend-up text-lime-500"></i> Maken<span class="text-lime-500">Bank</span>
         </div>
         <img alt="user avatar" class="my-3" src="@/assets/avatar.png" width="75" height="75" />
@@ -43,6 +43,10 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <style scoped>
+.logo {
+  font-variation-settings: "wdth" 75;
+}
+
 .nav-list li {
   padding: 0.7rem
 }

@@ -16,38 +16,47 @@ import SideBar from '@/components/SideBar.vue'
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 87.5;
+}
+
 #app {
   display: flex;
   flex-direction: column;
 }
 
 h1, .h1 {
-  font-family: "Agdasima";
+  font-variation-settings: "wdth" 75;
   font-size: 2rem;
 }
 
 h2, .h2 {
-  font-family: "Agdasima";
+  font-variation-settings: "wdth" 75;
   font-size: 1.8rem;
 }
 
 h3, .h3 {
-  font-family: "Agdasima";
+  font-variation-settings: "wdth" 75;
   font-size: 1.6rem;
 }
 
 h4, .h4 {
-  font-family: "Agdasima";
+  font-variation-settings: "wdth" 75;
   font-size: 1.4rem;
 }
 
 h5, .h5 {
-  font-family: "Agdasima";
+  font-variation-settings: "wdth" 75;
   font-size: 1.2rem;
 }
 
 h6, .h6 {
-  font-family: "Agdasima";
+  font-variation-settings: "wdth" 75;
   font-size: 1rem;
 }
 

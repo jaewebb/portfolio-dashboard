@@ -7,6 +7,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import resolveConfig from 'tailwindcss/resolveConfig'
+/* @ts-expect-error: TODO: tailwind config issue that I will get typings for later */
 import tailwindConfig from './../../tailwind.config.js'
 
 const fullConfig = resolveConfig(tailwindConfig)
@@ -50,7 +51,7 @@ onMounted(() => {
           {
             label: 'Balance by Month (in CAD)',
             data: data.map((row) => row.cash),
-            borderColor: '#007733',
+            borderColor: fullConfig.theme.colors.lime[700],
             borderWidth: 2,
             borderRadius: 5,
             backgroundColor: fullConfig.theme.colors.lime[500],
