@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col justify-between">
     <main >
-      <h1 class="pt-1">Good Evening, Jae!</h1>
+      <h1 class="pt-1">{{ greeting }}, Jae!</h1>
       <span class="disclaimer">Last Updated: {{ lastUpdated }}</span>
       <div class="mt-3 grid grid-cols-5 gap-3">
         <DashboardCard class="col-span-3">
@@ -28,10 +28,26 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { format, subMinutes } from 'date-fns'
 
 import BarChart from '../components/BarChart.vue'
 import DashboardCard from '@/components/DashboardCard.vue'
 
-const lastUpdated = format(subMinutes(Date.now(), 1), 'MM/dd/yyyy hh:mm a')
+const date = computed(() => Date.now())
+const lastUpdated = computed(() => format(subMinutes(date.value, 1), 'MM/dd/yyyy hh:mm a'))
+const greeting = computed(() => {
+  const hour = Number(format(date.value, 'H'))
+  console.log(hour)
+  let time = ''
+
+  if (hour) {
+    if (hour < 12) time = 'Morning'
+    if (hour >= 12 && hour < 18) time = 'Afternoon'
+    if (hour >= 18) time = 'Evening'
+  }
+
+  if (time) return `Good ${time}`
+  else return 'Hello'
+})
 </script>
